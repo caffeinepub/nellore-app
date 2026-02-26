@@ -1,0 +1,25 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add real food images for Nellore Chepala Pulusu, Prawns Biriyani, and Natu Kodi Kura",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "summary": "Update CuisineSection to display generated images for Chepala Pulusu, Prawns Biriyani, and Natu Kodi Kura while maintaining South Indian theme styling and emoji fallback",
+      "acceptanceCriteria": [
+        "The Chepala Pulusu cuisine card displays the generated chepala-pulusu image as its banner.",
+        "The Prawns Biriyani cuisine card displays the generated prawns-biriyani image as its banner.",
+        "The Natu Kodi Kura cuisine card displays the generated natu-kodi-kura image as its banner.",
+        "Cards for dishes without a generated image still fall back to the emoji icon display.",
+        "All cuisine cards retain the existing South Indian terracotta/gold/teal theme and card layout."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CuisineSection.tsx",
+          "operation": "modify",
+          "description": "Add a mapping object that associates the dish names 'Nellore Chepala Pulusu', 'Prawns Biriyani', and 'Natu Kodi Kura' to their corresponding generated image filenames: frontend/public/assets/generated/chepala-pulusu.dim_800x500.png, frontend/public/assets/generated/prawns-biriyani.dim_800x500.png, and frontend/public/assets/generated/natu-kodi-kura.dim_800x500.png. Update the card banner rendering logic to check if a dish name exists in this mapping and display the mapped image; otherwise fall back to the emoji icon display. Preserve all existing South Indian theme styling including terracotta/gold/teal palette, Playfair Display and Lato fonts, spice-level badge overlay, and card layout structure."
+        }
+      ]
+    }
+  ]
+}

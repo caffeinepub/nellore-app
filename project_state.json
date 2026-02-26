@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 19,
+  "summary": "App about Nellore (a city in Andhra Pradesh, India) — general informational/content app.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Nellore-style Chepala Pulusu — a rich, tangy South Indian fish curry in a clay pot with tamarind-based red gravy, garnished with curry leaves and green chilies, served on a banana leaf (chepala-pulusu.dim_800x500.png)\n- Prawns Biriyani — a fragrant layered prawn biryani with saffron-colored basmati rice, whole spices, caramelized onions, and juicy prawns, garnished with fresh coriander and mint (prawns-biriyani.dim_800x500.png)\n- Natu Kodi Kura — a rustic Andhra-style country chicken curry with a dark, spicy masala gravy, curry leaves, and red chilies in a traditional clay cooking vessel (natu-kodi-kura.dim_800x500.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-multi-section-frontend-that-displays-information-about-nellore-city-fetched-from-the-backend-include-sections-hero-welcome-about-history-top-attractions-local-cuisine-demographics-and-fun-facts",
+      "title": "Build a multi-section frontend that displays information about Nellore city fetched from the backend. Include sections: Hero/Welcome, About & History, Top Attractions, Local Cuisine, Demographics, and Fun Facts.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-warm-vibrant-visual-theme-inspired-by-south-indian-culture-using-earthy-terracotta-golden-yellow-and-deep-teal-tones-with-traditional-inspired-typography-and-card-based-layouts-enforce-this-theme-consistently-across-all-sections",
+      "title": "Apply a warm, vibrant visual theme inspired by South Indian culture — using earthy terracotta, golden yellow, and deep teal tones, with traditional-inspired typography and card-based layouts. Enforce this theme consistently across all sections.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-display-a-decorative-hero-banner-image-representing-nellore-city-featuring-the-pulicat-lake-or-nellore-s-scenic-landscape-and-a-small-iconic-logo-emblem-for-the-app-header",
+      "title": "Generate and display a decorative hero banner image representing Nellore city — featuring the Pulicat Lake or Nellore's scenic landscape — and a small iconic logo/emblem for the app header.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-userestaurants-react-query-hook-in-frontend-src-hooks-usequeries-ts-that-fetches-the-restaurants-list-from-the-backend-actor-include-seed-data-constants-for-all-nellore-restaurants-matching-the-backend-payload",
+      "title": "Add a `useRestaurants` React Query hook in `frontend/src/hooks/useQueries.ts` that fetches the restaurants list from the backend actor. Include seed data constants for all Nellore restaurants matching the backend payload.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-frontend-src-components-restaurantssection-tsx-component-that-displays-all-nellore-restaurants-in-a-responsive-card-grid-3-columns-on-desktop-2-on-tablet-1-on-mobile-each-card-should-show-the-restaurant-emoji-name-cuisine-type-badge-area-location-badge-price-range-indicator-and-description-apply-the-existing-south-indian-theme-terracotta-gold-teal-color-palette-playfair-display-lato-fonts-card-based-layout-show-skeleton-loading-states-while-data-is-fetching-use-a-sectionheader-with-an-appropriate-title-and-subtitle",
+      "title": "Create a new `frontend/src/components/RestaurantsSection.tsx` component that displays all Nellore restaurants in a responsive card grid (3 columns on desktop, 2 on tablet, 1 on mobile). Each card should show the restaurant emoji, name, cuisine type badge, area/location badge, price range indicator, and description. Apply the existing South Indian theme (terracotta, gold, teal color palette, Playfair Display / Lato fonts, card-based layout). Show skeleton loading states while data is fetching. Use a `SectionHeader` with an appropriate title and subtitle.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-restaurantssection-into-frontend-src-app-tsx-insert-it-between-the-cuisinesection-and-demographicssection-seed-the-restaurants-data-on-app-load-alongside-the-existing-seeding-logic-if-the-restaurants-store-is-empty-add-a-restaurants-navigation-link-to-frontend-src-components-navigation-tsx-pointing-to-the-restaurants-section-anchor",
+      "title": "Integrate the RestaurantsSection into `frontend/src/App.tsx`. Insert it between the CuisineSection and DemographicsSection. Seed the restaurants data on app load (alongside the existing seeding logic) if the restaurants store is empty. Add a 'Restaurants' navigation link to `frontend/src/components/Navigation.tsx` pointing to the restaurants section anchor.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-and-correct-the-restaurant-seed-data-constants-in-frontend-src-hooks-usequeries-ts-and-the-backend-restaurant-records-in-backend-main-mo-replace-any-inaccurate-fabricated-or-placeholder-restaurant-entries-with-accurate-real-and-well-known-restaurants-in-nellore-city-ensure-each-restaurant-has-correct-name-cuisine-type-area-neighborhood-price-range-description-and-emoji-cover-a-variety-of-cuisines-andhra-south-indian-north-indian-fast-food-seafood-etc-and-city-areas",
+      "title": "Audit and correct the restaurant seed data constants in `frontend/src/hooks/useQueries.ts` and the backend restaurant records in `backend/main.mo`. Replace any inaccurate, fabricated, or placeholder restaurant entries with accurate, real, and well-known restaurants in Nellore city. Ensure each restaurant has correct: name, cuisine type, area/neighborhood, price range, description, and emoji. Cover a variety of cuisines (Andhra, South Indian, North Indian, fast food, seafood, etc.) and city areas.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-restaurant-seed-data-constants-in-frontend-src-hooks-usequeries-ts-to-exactly-match-the-corrected-backend-restaurant-records-from-req-10-ensure-every-restaurant-entry-in-the-frontend-seed-constants-is-identical-name-cuisine-area-pricerange-description-emoji-to-the-corresponding-backend-record-so-seeding-produces-consistent-results",
+      "title": "Update the restaurant seed data constants in `frontend/src/hooks/useQueries.ts` to exactly match the corrected backend restaurant records from REQ-10. Ensure every restaurant entry in the frontend seed constants is identical (name, cuisine, area, priceRange, description, emoji) to the corresponding backend record so seeding produces consistent results.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-hooks-usequeries-ts-update-the-restaurant-seed-data-constants-so-that-only-the-murali-krishna-entry-is-present-remove-all-other-restaurant-seed-entries-the-frontend-seed-constant-must-contain-exactly-one-restaurant-matching-the-backend-murali-krishna-record-identical-name-cuisine-area-pricerange-description-and-emoji",
+      "title": "In `frontend/src/hooks/useQueries.ts`, update the restaurant seed data constants so that only the 'Murali Krishna' entry is present. Remove all other restaurant seed entries. The frontend seed constant must contain exactly one restaurant matching the backend Murali Krishna record (identical name, cuisine, area, priceRange, description, and emoji).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-components-herosection-tsx-to-display-the-newly-generated-nellore-images-use-the-scenic-landscape-banner-as-the-hero-background-image-and-the-city-emblem-as-the-header-logo-ensure-images-are-loaded-from-frontend-public-assets-generated-and-maintain-the-existing-south-indian-theme-styling",
+      "title": "Update `frontend/src/components/HeroSection.tsx` to display the newly generated Nellore images. Use the scenic landscape banner as the hero background image and the city emblem as the header logo. Ensure images are loaded from `frontend/public/assets/generated/` and maintain the existing South Indian theme styling.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-components-attractionssection-tsx-to-display-a-generated-image-for-each-top-attraction-card-load-images-from-frontend-public-assets-generated-as-card-visuals-above-the-attraction-name-and-description-maintain-the-existing-south-indian-theme-styling-terracotta-gold-teal-palette-playfair-display-lato-fonts-card-based-layout-if-an-attraction-s-image-is-not-available-fall-back-to-the-existing-emoji-icon-display",
+      "title": "Update `frontend/src/components/AttractionsSection.tsx` to display a generated image for each top attraction card. Load images from `frontend/public/assets/generated/` as card visuals above the attraction name and description. Maintain the existing South Indian theme styling (terracotta, gold, teal palette, Playfair Display / Lato fonts, card-based layout). If an attraction's image is not available, fall back to the existing emoji icon display.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-components-cuisinesection-tsx-to-display-a-generated-image-for-each-cuisine-card-load-images-from-frontend-public-assets-generated-as-card-visuals-above-the-dish-name-and-description-maintain-the-existing-south-indian-theme-styling-terracotta-gold-teal-palette-playfair-display-lato-fonts-card-based-layout-if-a-cuisine-item-s-image-is-not-available-fall-back-to-the-existing-emoji-icon-display",
+      "title": "Update `frontend/src/components/CuisineSection.tsx` to display a generated image for each cuisine card. Load images from `frontend/public/assets/generated/` as card visuals above the dish name and description. Maintain the existing South Indian theme styling (terracotta, gold, teal palette, Playfair Display / Lato fonts, card-based layout). If a cuisine item's image is not available, fall back to the existing emoji icon display.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-src-components-cuisinesection-tsx-to-render-the-newly-generated-images-for-chepala-pulusu-prawns-biriyani-and-natu-kodi-kura-map-each-dish-name-to-its-corresponding-image-filename-in-assets-generated-and-display-it-as-the-card-banner-image-maintain-the-existing-south-indian-theme-styling-terracotta-gold-teal-palette-playfair-display-lato-fonts-and-keep-the-emoji-fallback-for-any-dish-without-a-generated-image",
+      "title": "Update `frontend/src/components/CuisineSection.tsx` to render the newly generated images for Chepala Pulusu, Prawns Biriyani, and Natu Kodi Kura. Map each dish name to its corresponding image filename in `/assets/generated/` and display it as the card banner image. Maintain the existing South Indian theme styling (terracotta, gold, teal palette, Playfair Display / Lato fonts) and keep the emoji fallback for any dish without a generated image.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create an app about Nellore city (Andhra Pradesh, India)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend actor that stores and serves structured information about Nellore city, including sections for: overview/history, key attractions, local cuisine, demographics, and notable facts.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a restaurant section showcasing restaurants in Nellore city",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add a `restaurants` data store to the backend actor in `backend/main.mo`. Define a Restaurant type with fields: name (Text), cuisine (Text), area (Text), priceRange (Text), description (Text), and emoji (Text). Populate it with a comprehensive list of real and well-known restaurants in Nellore city, covering a variety of cuisines (Andhra, South Indian, North Indian, fast food, seafood, etc.) and city areas. Expose `addRestaurant`, `getRestaurants`, and `getRestaurantsCount` methods.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Replace all restaurant entries in the backend actor (`backend/main.mo`) with verified, accurate, real, and well-known restaurants in Nellore city. Research and use only restaurants that genuinely exist in Nellore, Andhra Pradesh. Each restaurant record must have: correct name, accurate cuisine type (e.g., Andhra, South Indian, North Indian, seafood, fast food, Chinese, etc.), correct area/neighborhood within Nellore, realistic price range (₹, ₹₹, or ₹₹₹), an accurate short description, and a fitting emoji. Cover a diverse mix of cuisines and different parts of the city. Remove any fabricated, placeholder, or unverifiable restaurant entries.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Keep only 'Murali Krishna' restaurant in the listings and remove all other restaurant entries from both frontend seed data and backend actor",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "In `backend/main.mo` and `backend/migration.mo`, remove all restaurant entries except 'Murali Krishna'. The restaurants store should contain only the single 'Murali Krishna' restaurant record with its existing fields (name, cuisine, area, priceRange, description, emoji). All other restaurant entries must be deleted.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add Nellore images to the home page hero/welcome section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add images for the top attractions section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add images for the local cuisine section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add real food images for Nellore chepala pulusu (fish curry), prawns biriyani, and natu kodi kura (country chicken curry) to the cuisine section",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Nellore App",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

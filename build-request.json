@@ -1,0 +1,45 @@
+{
+  "kind": "build_request",
+  "title": "Add real food images for Nellore Chepala Pulusu, Prawns Biriyani, and Natu Kodi Kura",
+  "projectName": "Nellore City Guide",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "text": "Update `frontend/src/components/CuisineSection.tsx` to render the newly generated images for Chepala Pulusu, Prawns Biriyani, and Natu Kodi Kura. Map each dish name to its corresponding image filename in `/assets/generated/` and display it as the card banner image. Maintain the existing South Indian theme styling (terracotta, gold, teal palette, Playfair Display / Lato fonts) and keep the emoji fallback for any dish without a generated image.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Add real images for Nellore chepala pulusu and prawns biriyani, natu kodi kura"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Chepala Pulusu cuisine card displays the generated chepala-pulusu image as its banner.",
+        "The Prawns Biriyani cuisine card displays the generated prawns-biriyani image as its banner.",
+        "The Natu Kodi Kura cuisine card displays the generated natu-kodi-kura image as its banner.",
+        "Cards for dishes without a generated image still fall back to the emoji icon display.",
+        "All cuisine cards retain the existing South Indian terracotta/gold/teal theme and card layout."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files listed under frontend.immutablePaths.",
+    "Images must be served as static assets from frontend/public/assets/generated/ — do not route them through the backend."
+  ],
+  "nonGoals": [
+    "Adding or modifying backend cuisine data.",
+    "Adding images for any cuisine items not mentioned (other than the three specified dishes).",
+    "Changing the overall layout or theme of the Cuisine section."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Nellore-style Chepala Pulusu — a rich, tangy South Indian fish curry in a clay pot with tamarind-based red gravy, garnished with curry leaves and green chilies, served on a banana leaf (chepala-pulusu.dim_800x500.png)",
+      "Prawns Biriyani — a fragrant layered prawn biryani with saffron-colored basmati rice, whole spices, caramelized onions, and juicy prawns, garnished with fresh coriander and mint (prawns-biriyani.dim_800x500.png)",
+      "Natu Kodi Kura — a rustic Andhra-style country chicken curry with a dark, spicy masala gravy, curry leaves, and red chilies in a traditional clay cooking vessel (natu-kodi-kura.dim_800x500.png)"
+    ],
+    "edits": []
+  }
+}

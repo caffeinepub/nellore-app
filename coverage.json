@@ -1,0 +1,40 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T08:24:27.097Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-17",
+        "summary": "Update `frontend/src/components/CuisineSection.tsx` to render the newly generated images for Chepala Pulusu, Prawns Biriyani, and Natu Kodi Kura. Map each dish name to its corresponding image filename in `/assets/generated/` and display it as the card banner image. Maintain the existing South Indian theme styling (terracotta, gold, teal palette, Playfair Display / Lato fonts) and keep the emoji fallback for any dish without a generated image.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CuisineSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CuisineSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/chepala-pulusu.dim_800x500.png",
+    "frontend/public/assets/generated/natu-kodi-kura.dim_800x500.png",
+    "frontend/public/assets/generated/prawns-biriyani.dim_800x500.png",
+    "frontend/src/components/CuisineSection.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

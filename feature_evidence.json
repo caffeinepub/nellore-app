@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-frontend-src-components-cuisinesection-tsx-to-render-the-newly-generated-images-for-chepala-pulusu-prawns-biriyani-and-natu-kodi-kura-map-each-dish-name-to-its-corresponding-image-filename-in-assets-generated-and-display-it-as-the-card-banner-image-maintain-the-existing-south-indian-theme-styling-terracotta-gold-teal-palette-playfair-display-lato-fonts-and-keep-the-emoji-fallback-for-any-dish-without-a-generated-image",
+      "featureTitle": "Update `frontend/src/components/CuisineSection.tsx` to render the newly generated images for Chepala Pulusu, Prawns Biriyani, and Natu Kodi Kura. Map each dish name to its corresponding image filename in `/assets/generated/` and display it as the card banner image. Maintain the existing South Indian theme styling (terracotta, gold, teal palette, Playfair Display / Lato fonts) and keep the emoji fallback for any dish without a generated image.",
+      "files": [
+        "frontend/src/components/CuisineSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
