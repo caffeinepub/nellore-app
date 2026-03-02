@@ -1,5 +1,5 @@
-import { MapPin } from 'lucide-react';
-import SectionHeader from './SectionHeader';
+import { MapPin } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 interface Attraction {
   name: string;
@@ -10,28 +10,32 @@ interface Attraction {
 
 const ATTRACTIONS: Attraction[] = [
   {
-    name: 'Pulicat Lake',
-    description: 'One of India\'s largest brackish water lagoons, a haven for migratory birds including flamingos, pelicans, and birds from Siberia and Central Asia.',
-    image: '/assets/generated/nellore-attraction-pulicat.dim_800x500.jpg',
-    icon: '🦩',
+    name: "Pulicat Lake",
+    description:
+      "One of India's largest brackish water lagoons, a haven for migratory birds including flamingos, pelicans, and birds from Siberia and Central Asia.",
+    image: "/assets/generated/nellore-attraction-pulicat.dim_800x500.jpg",
+    icon: "🦩",
   },
   {
-    name: 'Kandaleru Dam',
-    description: 'A scenic reservoir surrounded by hills, ideal for picnics and nature walks. The calm waters and lush greenery make it a popular weekend getaway.',
-    image: '/assets/generated/nellore-attraction-kandaleru.dim_800x500.jpg',
-    icon: '🏞️',
+    name: "Kandaleru Dam",
+    description:
+      "A scenic reservoir surrounded by hills, ideal for picnics and nature walks. The calm waters and lush greenery make it a popular weekend getaway.",
+    image: "/assets/generated/nellore-attraction-kandaleru.dim_800x500.jpg",
+    icon: "🏞️",
   },
   {
-    name: 'Penchalakona',
-    description: 'A forested pilgrimage site with a waterfall and ancient temple dedicated to Lord Narasimha, nestled in the Eastern Ghats.',
-    image: '/assets/generated/nellore-attraction-penchalakona.dim_800x500.jpg',
-    icon: '⛩️',
+    name: "Penchalakona",
+    description:
+      "A forested pilgrimage site with a waterfall and ancient temple dedicated to Lord Narasimha, nestled in the Eastern Ghats.",
+    image: "/assets/generated/nellore-attraction-penchalakona.dim_800x500.jpg",
+    icon: "⛩️",
   },
   {
-    name: 'Nellore City',
-    description: 'A vibrant city with bustling markets, rich history, and cultural landmarks on the banks of the Pennar River.',
-    image: '/assets/generated/nellore-city.dim_1200x600.jpg',
-    icon: '🏙️',
+    name: "Nellore City",
+    description:
+      "A vibrant city with bustling markets, rich history, and cultural landmarks on the banks of the Pennar River.",
+    image: "/assets/generated/nellore-city.dim_1200x600.jpg",
+    icon: "🏙️",
   },
 ];
 
@@ -60,7 +64,9 @@ function AttractionCard({ attraction }: { attraction: Attraction }) {
             </h3>
             <div className="flex items-center gap-1 mt-1">
               <MapPin size={12} className="text-teal-500 shrink-0" />
-              <span className="font-body text-xs text-muted-foreground">Nellore, AP</span>
+              <span className="font-body text-xs text-muted-foreground">
+                Nellore, AP
+              </span>
             </div>
           </div>
         </div>

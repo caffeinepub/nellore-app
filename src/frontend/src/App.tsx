@@ -1,23 +1,25 @@
-import { useEffect } from 'react';
-import { useActor } from '@/hooks/useActor';
+import AboutSection from "@/components/AboutSection";
+import AttractionsSection from "@/components/AttractionsSection";
+import CuisineSection from "@/components/CuisineSection";
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import HotelsSection from "@/components/HotelsSection";
+import Navigation from "@/components/Navigation";
+import RestaurantsSection from "@/components/RestaurantsSection";
+import { useActor } from "@/hooks/useActor";
 import {
-  useSeedData,
   useOverview,
   useRestaurantsCount,
+  useSeedData,
   useSeedRestaurants,
-} from '@/hooks/useQueries';
-import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import AttractionsSection from '@/components/AttractionsSection';
-import CuisineSection from '@/components/CuisineSection';
-import RestaurantsSection from '@/components/RestaurantsSection';
-import Footer from '@/components/Footer';
+} from "@/hooks/useQueries";
+import { useEffect } from "react";
 
 function AppContent() {
   const { actor, isFetching } = useActor();
   const { data: overview, isLoading: overviewLoading } = useOverview();
-  const { data: restaurantsCount, isLoading: restaurantsCountLoading } = useRestaurantsCount();
+  const { data: restaurantsCount, isLoading: restaurantsCountLoading } =
+    useRestaurantsCount();
   const seedMutation = useSeedData();
   const seedRestaurantsMutation = useSeedRestaurants();
 
@@ -26,8 +28,8 @@ function AppContent() {
     if (!actor || isFetching || overviewLoading) return;
     const isEmpty =
       !overview ||
-      overview === 'No overview available' ||
-      overview.trim() === '';
+      overview === "No overview available" ||
+      overview.trim() === "";
     if (isEmpty && !seedMutation.isPending && !seedMutation.isSuccess) {
       seedMutation.mutate();
     }
@@ -36,11 +38,22 @@ function AppContent() {
   // Seed restaurants if the store is empty
   useEffect(() => {
     if (!actor || isFetching || restaurantsCountLoading) return;
-    const isEmpty = restaurantsCount === undefined || restaurantsCount === BigInt(0);
-    if (isEmpty && !seedRestaurantsMutation.isPending && !seedRestaurantsMutation.isSuccess) {
+    const isEmpty =
+      restaurantsCount === undefined || restaurantsCount === BigInt(0);
+    if (
+      isEmpty &&
+      !seedRestaurantsMutation.isPending &&
+      !seedRestaurantsMutation.isSuccess
+    ) {
       seedRestaurantsMutation.mutate();
     }
-  }, [actor, isFetching, restaurantsCount, restaurantsCountLoading, seedRestaurantsMutation]);
+  }, [
+    actor,
+    isFetching,
+    restaurantsCount,
+    restaurantsCountLoading,
+    seedRestaurantsMutation,
+  ]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -64,6 +77,10 @@ function AppContent() {
         <div className="section-divider" />
 
         <RestaurantsSection />
+
+        <div className="section-divider" />
+
+        <HotelsSection />
       </main>
       <Footer />
     </div>

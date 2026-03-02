@@ -1,14 +1,18 @@
 interface SectionHeaderProps {
   title: string;
   subtitle?: string;
-  accent?: 'terracotta' | 'gold' | 'teal';
+  accent?: "terracotta" | "gold" | "teal";
 }
 
-export default function SectionHeader({ title, subtitle, accent = 'terracotta' }: SectionHeaderProps) {
+export default function SectionHeader({
+  title,
+  subtitle,
+  accent = "terracotta",
+}: SectionHeaderProps) {
   const accentClasses = {
-    terracotta: 'bg-terracotta-500',
-    gold: 'bg-gold-500',
-    teal: 'bg-teal-500',
+    terracotta: "bg-terracotta-500",
+    gold: "bg-gold-500",
+    teal: "bg-teal-500",
   };
 
   return (

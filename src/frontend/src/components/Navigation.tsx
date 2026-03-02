@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Attractions', href: '#attractions' },
-  { label: 'Cuisine', href: '#cuisine' },
-  { label: 'Restaurants', href: '#restaurants' },
+  { label: "About", href: "#about" },
+  { label: "Attractions", href: "#attractions" },
+  { label: "Cuisine", href: "#cuisine" },
+  { label: "Restaurants", href: "#restaurants" },
+  { label: "Hotels", href: "#hotels" },
 ];
 
 export default function Navigation() {
@@ -14,15 +15,15 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
     const el = document.querySelector(href);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -30,8 +31,8 @@ export default function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-card/95 backdrop-blur-md shadow-warm border-b border-border'
-          : 'bg-transparent'
+          ? "bg-card/95 backdrop-blur-md shadow-warm border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +40,7 @@ export default function Navigation() {
           {/* Logo + Brand */}
           <button
             type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-3 group"
           >
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-gold-400 shadow-warm shrink-0 bg-white/10">
@@ -52,14 +53,14 @@ export default function Navigation() {
             <div className="text-left">
               <span
                 className={`font-heading font-bold text-lg md:text-xl leading-tight block transition-colors ${
-                  scrolled ? 'text-foreground' : 'text-white'
+                  scrolled ? "text-foreground" : "text-white"
                 }`}
               >
                 Nellore
               </span>
               <span
                 className={`text-xs font-body tracking-widest uppercase transition-colors ${
-                  scrolled ? 'text-terracotta-500' : 'text-gold-300'
+                  scrolled ? "text-terracotta-500" : "text-gold-300"
                 }`}
               >
                 Andhra Pradesh
@@ -76,8 +77,8 @@ export default function Navigation() {
                 onClick={() => handleNavClick(link.href)}
                 className={`px-3 py-2 rounded-md font-body text-sm font-medium tracking-wide transition-all duration-200 hover:bg-terracotta-500/10 hover:text-terracotta-500 ${
                   scrolled
-                    ? 'text-foreground'
-                    : 'text-white/90 hover:text-white hover:bg-white/10'
+                    ? "text-foreground"
+                    : "text-white/90 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {link.label}
@@ -90,7 +91,9 @@ export default function Navigation() {
             type="button"
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-md transition-colors ${
-              scrolled ? 'text-foreground hover:bg-muted' : 'text-white hover:bg-white/10'
+              scrolled
+                ? "text-foreground hover:bg-muted"
+                : "text-white hover:bg-white/10"
             }`}
             aria-label="Toggle menu"
           >

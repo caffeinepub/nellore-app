@@ -1,7 +1,7 @@
-import { BookOpen } from 'lucide-react';
-import { useOverview } from '@/hooks/useQueries';
-import { Skeleton } from '@/components/ui/skeleton';
-import SectionHeader from './SectionHeader';
+import { Skeleton } from "@/components/ui/skeleton";
+import { useOverview } from "@/hooks/useQueries";
+import { BookOpen } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 export default function AboutSection() {
   const { data: overview, isLoading } = useOverview();
@@ -44,7 +44,7 @@ export default function AboutSection() {
               </div>
             ) : (
               <p className="font-body text-foreground/85 leading-relaxed text-base sm:text-lg">
-                {overview || 'Loading overview...'}
+                {overview || "Loading overview..."}
               </p>
             )}
           </div>
@@ -53,10 +53,10 @@ export default function AboutSection() {
         {/* Quick info pills */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
           {[
-            { label: 'State', value: 'Andhra Pradesh' },
-            { label: 'River', value: 'Penna (Pennar)' },
-            { label: 'Known For', value: 'Aquaculture & Shrimp' },
-            { label: 'Language', value: 'Telugu' },
+            { label: "State", value: "Andhra Pradesh" },
+            { label: "River", value: "Penna (Pennar)" },
+            { label: "Known For", value: "Aquaculture & Shrimp" },
+            { label: "Language", value: "Telugu" },
           ].map((item) => (
             <div
               key={item.label}

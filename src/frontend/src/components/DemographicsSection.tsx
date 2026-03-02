@@ -1,13 +1,13 @@
-import { Users, Loader2 } from 'lucide-react';
-import { useDemographics } from '@/hooks/useQueries';
-import { Skeleton } from '@/components/ui/skeleton';
-import SectionHeader from './SectionHeader';
+import { Skeleton } from "@/components/ui/skeleton";
+import { useDemographics } from "@/hooks/useQueries";
+import { Loader2, Users } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 const DEMO_STATS = [
-  { icon: '👥', label: 'District Population', value: '~2.97M' },
-  { icon: '🏙️', label: 'City Population', value: '~600K' },
-  { icon: '📚', label: 'Literacy Rate', value: '~72%' },
-  { icon: '🗣️', label: 'Primary Language', value: 'Telugu' },
+  { icon: "👥", label: "District Population", value: "~2.97M" },
+  { icon: "🏙️", label: "City Population", value: "~600K" },
+  { icon: "📚", label: "Literacy Rate", value: "~72%" },
+  { icon: "🗣️", label: "Primary Language", value: "Telugu" },
 ];
 
 export default function DemographicsSection() {
@@ -61,7 +61,7 @@ export default function DemographicsSection() {
               </div>
             ) : (
               <p className="font-body text-foreground/85 leading-relaxed text-base">
-                {demographics || 'Loading demographics...'}
+                {demographics || "Loading demographics..."}
               </p>
             )}
           </div>

@@ -1,4 +1,4 @@
-import SectionHeader from './SectionHeader';
+import SectionHeader from "./SectionHeader";
 
 interface Dish {
   name: string;
@@ -10,37 +10,41 @@ interface Dish {
 
 const CUISINE: Dish[] = [
   {
-    name: 'Nellore Chepala Pulusu',
-    description: 'A spicy fish curry made with tamarind and local spices, the signature dish of Nellore. Considered one of the most flavorful fish curries in all of South India.',
-    image: '/assets/generated/nellore-chepala-pulusu.dim_800x600.jpg',
-    spiceLevel: 'Very Hot',
-    icon: '🐟',
+    name: "Nellore Chepala Pulusu",
+    description:
+      "A spicy fish curry made with tamarind and local spices, the signature dish of Nellore. Considered one of the most flavorful fish curries in all of South India.",
+    image: "/assets/generated/nellore-chepala-pulusu.dim_800x600.jpg",
+    spiceLevel: "Very Hot",
+    icon: "🐟",
   },
   {
-    name: 'Prawns Biryani',
-    description: 'Fragrant basmati rice cooked with fresh prawns and aromatic spices, an Andhra specialty. Slow-cooked with saffron and caramelized onions for a deeply satisfying meal.',
-    image: '/assets/generated/nellore-prawns-biryani.dim_800x600.jpg',
-    spiceLevel: 'Hot',
-    icon: '🦐',
+    name: "Prawns Biryani",
+    description:
+      "Fragrant basmati rice cooked with fresh prawns and aromatic spices, an Andhra specialty. Slow-cooked with saffron and caramelized onions for a deeply satisfying meal.",
+    image: "/assets/generated/nellore-prawns-biryani.dim_800x600.jpg",
+    spiceLevel: "Hot",
+    icon: "🦐",
   },
   {
-    name: 'Natu Kodi Kura',
-    description: 'A bold country chicken curry with fresh ground masalas, a rustic Telugu classic. Made with dry-roasted spices and tamarind for a rich, intensely flavored gravy.',
-    image: '/assets/generated/nellore-natu-kodi-kura.dim_800x600.jpg',
-    spiceLevel: 'Hot',
-    icon: '🍖',
+    name: "Natu Kodi Kura",
+    description:
+      "A bold country chicken curry with fresh ground masalas, a rustic Telugu classic. Made with dry-roasted spices and tamarind for a rich, intensely flavored gravy.",
+    image: "/assets/generated/nellore-natu-kodi-kura.dim_800x600.jpg",
+    spiceLevel: "Hot",
+    icon: "🍖",
   },
 ];
 
 const spiceColorMap: Record<string, string> = {
-  'Very Hot': 'bg-terracotta-600/15 text-terracotta-700 border-terracotta-600/25',
-  Hot: 'bg-terracotta-500/10 text-terracotta-600 border-terracotta-500/20',
-  Medium: 'bg-gold-500/10 text-gold-700 border-gold-500/20',
-  Mild: 'bg-teal-500/10 text-teal-700 border-teal-500/20',
+  "Very Hot":
+    "bg-terracotta-600/15 text-terracotta-700 border-terracotta-600/25",
+  Hot: "bg-terracotta-500/10 text-terracotta-600 border-terracotta-500/20",
+  Medium: "bg-gold-500/10 text-gold-700 border-gold-500/20",
+  Mild: "bg-teal-500/10 text-teal-700 border-teal-500/20",
 };
 
 function CuisineCard({ dish }: { dish: Dish }) {
-  const spiceColor = spiceColorMap[dish.spiceLevel] ?? spiceColorMap['Medium'];
+  const spiceColor = spiceColorMap[dish.spiceLevel] ?? spiceColorMap.Medium;
 
   return (
     <div className="bg-card rounded-2xl border border-border shadow-warm card-hover group overflow-hidden flex flex-col">
@@ -95,7 +99,8 @@ export default function CuisineSection() {
         {/* Decorative note */}
         <div className="mt-10 text-center">
           <p className="font-body text-sm text-muted-foreground italic">
-            🌶️ Nellore cuisine is renowned for its bold use of red chillies and tamarind — not for the faint-hearted!
+            🌶️ Nellore cuisine is renowned for its bold use of red chillies and
+            tamarind — not for the faint-hearted!
           </p>
         </div>
       </div>

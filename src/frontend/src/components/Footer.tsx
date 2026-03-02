@@ -1,10 +1,14 @@
-import { Heart } from 'lucide-react';
+import { Heart } from "lucide-react";
 
-const NAV_ITEMS = ['About', 'Attractions', 'Cuisine', 'Restaurants'];
+const NAV_ITEMS = ["About", "Attractions", "Cuisine", "Restaurants"];
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const appId = encodeURIComponent(typeof window !== 'undefined' ? window.location.hostname : 'nellore-explorer');
+  const appId = encodeURIComponent(
+    typeof window !== "undefined"
+      ? window.location.hostname
+      : "nellore-explorer",
+  );
 
   return (
     <footer className="bg-foreground text-background py-12 px-4 sm:px-6">
@@ -37,7 +41,8 @@ export default function Footer() {
                 type="button"
                 onClick={() => {
                   const el = document.querySelector(`#${item.toLowerCase()}`);
-                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  if (el)
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
                 className="font-body text-sm text-background/60 hover:text-gold-400 transition-colors"
               >
@@ -56,9 +61,12 @@ export default function Footer() {
             © {year} Nellore — The City of Culture and Cuisine
           </p>
           <p className="font-body text-xs text-background/50 flex items-center gap-1.5">
-            Built with{' '}
-            <Heart size={12} className="text-terracotta-400 fill-terracotta-400" />{' '}
-            using{' '}
+            Built with{" "}
+            <Heart
+              size={12}
+              className="text-terracotta-400 fill-terracotta-400"
+            />{" "}
+            using{" "}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appId}`}
               target="_blank"

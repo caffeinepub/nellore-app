@@ -1,5 +1,5 @@
-import { MapPin, Star } from 'lucide-react';
-import SectionHeader from './SectionHeader';
+import { MapPin, Star } from "lucide-react";
+import SectionHeader from "./SectionHeader";
 
 interface RestaurantData {
   name: string;
@@ -14,33 +14,37 @@ interface RestaurantData {
 
 const RESTAURANTS: RestaurantData[] = [
   {
-    name: 'Murali Krishna Restaurant',
-    type: 'Andhra Cuisine',
-    description: 'Famous for authentic Andhra meals and Nellore-style seafood dishes. A local favorite for traditional home-style cooking.',
-    address: 'Nellore, Andhra Pradesh',
+    name: "Murali Krishna Restaurant",
+    type: "Andhra Cuisine",
+    description:
+      "Famous for authentic Andhra meals and Nellore-style seafood dishes. A local favorite for traditional home-style cooking.",
+    address: "Nellore, Andhra Pradesh",
     rating: 4.5,
     maxRating: 5,
-    emoji: '🍽️',
+    emoji: "🍽️",
+    image: "/assets/generated/murali-krishna-poori.dim_800x600.jpg",
   },
   {
-    name: 'Komala Vilas',
-    type: 'Vegetarian | South Indian',
-    description: 'A beloved vegetarian restaurant known for its traditional South Indian breakfast and meals. Famous for crispy dosas, fluffy idlis, and filter coffee.',
-    address: 'Nellore, Andhra Pradesh',
+    name: "Komala Vilas",
+    type: "Vegetarian | South Indian",
+    description:
+      "A beloved vegetarian restaurant known for its traditional South Indian breakfast and meals. Famous for crispy dosas, fluffy idlis, and filter coffee.",
+    address: "Nellore, Andhra Pradesh",
     rating: 4.4,
     maxRating: 5,
-    emoji: '🥗',
-    image: '/assets/generated/komala-vilas-restaurant.dim_800x500.jpg',
+    emoji: "🥗",
+    image: "/assets/generated/komala-vilas-restaurant.dim_800x500.jpg",
   },
   {
-    name: 'Ganesh Mess',
-    type: 'Veg | Andhra Meals',
-    description: 'Popular vegetarian mess known for wholesome Andhra thali, sambar, rasam, and fresh vegetable curries. A go-to spot for authentic home-style Nellore vegetarian meals.',
-    address: 'Nellore, Andhra Pradesh',
+    name: "Ganesh Mess",
+    type: "Veg | Andhra Meals",
+    description:
+      "Popular vegetarian mess known for wholesome Andhra thali, sambar, rasam, and fresh vegetable curries. A go-to spot for authentic home-style Nellore vegetarian meals.",
+    address: "Nellore, Andhra Pradesh",
     rating: 4.3,
     maxRating: 5,
-    emoji: '🥬',
-    image: '/assets/generated/ganesh-mess-restaurant.dim_800x500.jpg',
+    emoji: "🥬",
+    image: "/assets/generated/ganesh-mess-restaurant.dim_800x500.jpg",
   },
 ];
 
@@ -58,10 +62,10 @@ function StarRating({ rating, max }: { rating: number; max: number }) {
           size={16}
           className={
             filled
-              ? 'text-gold-500 fill-gold-500'
+              ? "text-gold-500 fill-gold-500"
               : half
-              ? 'text-gold-400 fill-gold-200'
-              : 'text-muted-foreground/30 fill-transparent'
+                ? "text-gold-400 fill-gold-200"
+                : "text-muted-foreground/30 fill-transparent"
           }
         />
       ))}
@@ -103,7 +107,9 @@ function RestaurantCard({ restaurant }: { restaurant: RestaurantData }) {
         {/* Rating */}
         <div className="flex items-center gap-3 mb-5 pb-4 border-b border-border">
           <StarRating rating={restaurant.rating} max={restaurant.maxRating} />
-          <span className="font-body text-xs text-muted-foreground">Customer Rating</span>
+          <span className="font-body text-xs text-muted-foreground">
+            Customer Rating
+          </span>
         </div>
 
         {/* Description */}

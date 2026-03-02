@@ -1,9 +1,9 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
   const handleExplore = () => {
-    const el = document.querySelector('#about');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const el = document.querySelector("#about");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -44,16 +44,17 @@ export default function HeroSection() {
 
         {/* Tagline */}
         <p className="font-body text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-10 leading-relaxed">
-          The Cultural Heart of Andhra Pradesh — where ancient temples meet serene backwaters,
-          and the spirit of Telugu culture thrives on the banks of the Pennar River.
+          The Cultural Heart of Andhra Pradesh — where ancient temples meet
+          serene backwaters, and the spirit of Telugu culture thrives on the
+          banks of the Pennar River.
         </p>
 
         {/* Stats row */}
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mb-12">
           {[
-            { value: '~600K', label: 'City Population' },
-            { value: '2000+', label: 'Years of History' },
-            { value: '175 km', label: 'From Chennai' },
+            { value: "~600K", label: "City Population" },
+            { value: "2000+", label: "Years of History" },
+            { value: "175 km", label: "From Chennai" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-heading text-2xl sm:text-3xl font-bold text-gold-300">
