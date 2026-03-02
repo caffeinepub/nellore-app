@@ -1,5 +1,5 @@
-import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Download, Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -12,6 +12,29 @@ const NAV_LINKS = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
+  const [installed, setInstalled] = useState(false);
+  const deferredPrompt = useRef<any>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      e.preventDefault();
+      deferredPrompt.current = e;
+      setInstallPrompt(e);
+    };
+    window.addEventListener("beforeinstallprompt", handler);
+    window.addEventListener("appinstalled", () => setInstalled(true));
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
+
+  const handleInstall = async () => {
+    if (!deferredPrompt.current) return;
+    deferredPrompt.current.prompt();
+    const { outcome } = await deferredPrompt.current.userChoice;
+    if (outcome === "accepted") setInstalled(true);
+    deferredPrompt.current = null;
+    setInstallPrompt(null);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -84,6 +107,16 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            {installPrompt && !installed && (
+              <button
+                type="button"
+                onClick={handleInstall}
+                className="ml-2 flex items-center gap-1.5 px-3 py-2 rounded-md font-body text-sm font-semibold bg-terracotta-500 text-white hover:bg-terracotta-600 transition-colors shadow"
+              >
+                <Download size={14} />
+                Install App
+              </button>
+            )}
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -116,6 +149,19 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            {installPrompt && !installed && (
+              <button
+                type="button"
+                onClick={() => {
+                  setIsOpen(false);
+                  handleInstall();
+                }}
+                className="flex items-center gap-2 mt-2 px-4 py-3 rounded-md font-body text-sm font-semibold bg-terracotta-500 text-white hover:bg-terracotta-600 transition-colors"
+              >
+                <Download size={15} />
+                Install App on Phone
+              </button>
+            )}
           </nav>
         </div>
       )}
